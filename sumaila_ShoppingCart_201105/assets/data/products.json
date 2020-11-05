@@ -1,0 +1,78 @@
+{
+    "products":[
+        {
+        "id":101,
+        "name":"MacBook computer",
+        "image_url":"assets/images/computer1.jpeg",
+        "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, cum error aliquid repellendus quod ullam quisquam, pariatur at facilis voluptatum minus maxime consectetur,",
+        "price":499,
+        "category":"computer"
+    },
+    {
+        "id":102,
+        "name":"Villa Computer",
+        "image_url":"assets/images/computer2.jpeg",
+        "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, cum error aliquid repellendus quod ullam quisquam, pariatur at facilis voluptatum minus maxime consectetur,",
+        "price":456,
+        "category":"computer"
+    },
+    {
+        "id":103,
+        "name":"New York latest chair",
+        "image_url":"assets/images/chair1.jpeg",
+        "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, cum error aliquid repellendus quod ullam quisquam, pariatur at facilis voluptatum minus maxime consectetur,",
+        "price":299,
+        "category":"chair"
+    },
+    {
+        "id":104,
+        "name":"Navrongo City best Car",
+        "image_url":"assets/images/car1.jpeg",
+        "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, cum error aliquid repellendus quod ullam quisquam, pariatur at facilis voluptatum minus maxime consectetur,",
+        "price":289,
+        "category":"car"
+    },
+    {
+        "id":105,
+        "name":"Bacelona City computer",
+        "image_url":"assets/images/computer3.jpeg",
+        "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, cum error aliquid repellendus quod ullam quisquam, pariatur at facilis voluptatum minus maxime consectetur,",
+        "price":639,
+        "category":"computer"
+    },
+    {
+        "id":106,
+        "name":"Yendi City nice Car",
+        "image_url":"assets/images/car2.jpeg",
+        "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, cum error aliquid repellendus quod ullam quisquam, pariatur at facilis voluptatum minus maxime consectetur,",
+        "price":999,
+        "category":"car"
+    },
+    {
+        "id":107,
+        "name":"Beuatiful Chair",
+        "image_url":"assets/images/chair2.jpeg",
+        "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, cum error aliquid repellendus quod ullam quisquam, pariatur at facilis voluptatum minus maxime consectetur,",
+        "price":999,
+        "category":"chair"
+    },
+    {
+        "id":108,
+        "name" :"City nice Car",
+        "image_url":"assets/images/car3.jpeg",
+        "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, cum error aliquid repellendus quod ullam quisquam, pariatur at facilis voluptatum minus maxime consectetur,",
+        "price":849,
+        "category":"car"
+    },
+    {
+        "id":106,
+        "name":" Wooden made Chair",
+        "image_url":"assets/images/chairs3.jpeg",
+        "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, cum error aliquid repellendus quod ullam quisquam, pariatur at facilis voluptatum minus maxime consectetur,",
+        "price":99,
+        "category":"chair"
+    }
+
+
+]
+}
