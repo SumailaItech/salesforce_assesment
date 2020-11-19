@@ -1,5 +1,26 @@
 
+// fetching the data and displaying on the UI
 
+const fetchData = (category)=>{
+    fetch('http://localhost:5000/sumaila_ShoppingCart_201105/assets/data/products.json')
+    .then(response => response.json())
+    .then(data =>{
+        let products = data.products;
+        const title = document.querySelector('.category');
+        title.textContent = category.toUpperCase(); 
+      
+        for (const product of products) {
+            if(category === product.category){
+                createProduct({...product});
+            }else if(category ==='all'){
+                createProduct({...product});
+            }
+       }
+
+    } ).catch(err=>
+        console.log(err)
+    )
+}
  
 
 const createProduct = ({...product})=>{
@@ -10,6 +31,7 @@ const createProduct = ({...product})=>{
         <div class="product-item__content">
             <h2>${ product.name }</h2>
             <h3>\$${product.price }</h3>
+            <span id="cat">${product.category }</span>
             <p>${ product.description }</p>
             <button class="addToCart">Add to cart</button>
         </div>
@@ -23,13 +45,13 @@ const createProduct = ({...product})=>{
         let items = [];
         for(let i=0; i<addToCartBtn.length;i++){
         addToCartBtn[i].addEventListener('click', e=>{
-            console.log(e.target.parentElement.children[1].textContent);
+            //console.log(e.target.parentElement.children[1].textContent);
             if(typeof(Storage) !=='undefined'){
                 let item ={
                     id:i+1,
                     name:e.target.parentElement.children[0].textContent,
                     price:e.target.parentElement.children[1].textContent,
-                    num:1
+                    num:0
                 };
                 if(JSON.parse(localStorage.getItem('items'))=== null){
                     items.push(item);
@@ -55,46 +77,28 @@ const createProduct = ({...product})=>{
         });
         }
 
-        // addding to the cart
+// addding to the cart
 
-        const cartDisplay = document.getElementById('cartDisplay');
- 
-        let number = 0;
-        JSON.parse(localStorage.getItem('items')).map(data =>{
-            number = data.num;
-        });
+const cartDisplay = document.getElementById('cartDisplay');
+let number;
+ if(typeof(Storage) ==='undifined'){
+    number = 0;
+ }else{
+    JSON.parse(localStorage.getItem('items')).map(data =>{
+        number = data.num;
+    });
+ }
 
-        cartDisplay.textContent = `cart( ${number} )`;
+cartDisplay.textContent = `cart( ${number})`;
 
-        let tableData =`
+let tableData =`
+
+`;
         
-        `;
 }
 
 
-// fetching the data and displaying on the UI
 
-const fetchData = (category)=>{
-    fetch('http://localhost:5000/sumaila_ShoppingCart_201105/assets/data/products.json')
-    .then(response => response.json())
-    .then(data =>{
-        let products = data.products;
-        const title = document.querySelector('.category');
-        title.textContent = category.toUpperCase(); 
-      
-        for (const product of products) {
-            if(category === product.category){
-                createProduct({...product});
-            }else if(category ==='all'){
-                createProduct({...product});
-             //createProduct(product.name,product.price,product.description,product.image_url,product.category);
-            }
-       }
-
-    } ).catch(err=>
-        console.log(err)
-    )
-}
 
 fetchData('all');
 const navList = document.querySelector('.nav-cat');

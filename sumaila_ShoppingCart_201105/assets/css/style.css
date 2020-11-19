@@ -101,6 +101,13 @@ button,.addToCart {
     padding: 1rem;
     
   }
+  .product-item__content #cat{
+    padding: 0.5rem;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid #540075;
+    
+  }
   
   .product-item h2,
   .product-item h3 {
