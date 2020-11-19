@@ -1,0 +1,219 @@
+.categories{
+    max-width: 100%;
+    margin: 2.5rem auto;
+    /* height: 40px; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.category-item{
+    flex-grow: 1;
+    min-width: 31%;
+    border: 2px solid white;
+    box-sizing: border-box;
+    height: 19rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media(max-width:50rem){
+    .category-item{
+        flex-grow: 1;
+        min-width: 50%;
+    }
+}
+
+@media(max-width:25rem){
+    .category-item{
+        flex-grow: 1;
+        min-width: 100%;
+    }
+}
+
+.category-inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.category-inner > div{
+    padding: 0.3rem 0.6rem;
+    background-image: linear-gradient(to bottom, #dd2476, #ff512f);
+    /* background:black; */
+    color: white;
+    border-radius: 8px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.category-inner > div:hover{
+    background: #ccc;
+}
+
+
+
+.category-one,
+.category-two,
+.category-three,
+.category-four{
+    margin-top: 1.2rem; 
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.3rem;
+}
+
+@media(max-width:50rem){
+    .category-one,
+    .category-two,
+    .category-three,
+    .category-four{
+    grid-template-columns: 1fr;
+}
+
+.category-one-item img,
+.category-two-item img,
+.category-three-item img,
+.category-four-item img{
+    width: 50%
+}
+
+/* .category-one-item .card,
+.category-three-item .card{
+    left: 0; 
+}
+
+.category-two-item .card,
+.category-four-item .card{
+    right: 0; 
+} */
+}
+
+@media(max-width:50rem){
+    .category-one,
+    .category-two,
+    .category-three,
+    .category-four{
+    grid-template-columns: 1fr;
+}
+
+.category-one-item img,
+.category-two-item img,
+.category-three-item img,
+.category-four-item img{
+    width: 50%
+}
+
+.category-one-item .card,
+.category-three-item .card{
+    left: 0; 
+}
+
+.category-two-item .card,
+.category-four-item .card{
+    right: 0; 
+}
+
+.category-inner > div{
+    font-size: 1rem;
+}
+
+/* .category-one .category-one-item:last-child,
+.category-two .category-two-item:first-child,
+.category-three .category-three-item:last-child,
+.category-four .category-four-item:first-child{
+    position: none;
+}
+
+.our-services .card{
+    position: none;
+    background: #fff;
+    border-radius: 3px;
+    height: 40%;
+    text-align: center;
+} */
+}
+
+.our-services .card{
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 25px 45px rgb(0, 0,0,0.2);
+    padding: 13vmin 5vmin 20vmin 10vmin;
+    height: 40%;
+    text-align: center;
+    width: 90%;
+}
+
+@media(min-width:60rem){
+    .our-services .card{
+        background: #fff;
+        border-radius: 3px;
+        box-shadow: 0px 25px 45px rgb(0, 0,0,0.2);
+        padding: 13vmin 5vmin 20vmin 10vmin;
+        /* height: 40%; */
+        text-align: center;
+        width: 90%;
+    }
+
+    .category-one-item .card,
+.category-three-item .card{
+    left: -30vmin; 
+}
+
+.category-two-item .card,
+.category-four-item .card{
+    right: -30vmin; 
+}
+}
+
+.category-one-item img,
+.category-two-item img,
+.category-three-item img,
+.category-four-item img{
+    width: 90%
+}
+
+@media(min-width:50rem){
+    .category-one .category-one-item:last-child,
+.category-two .category-two-item:first-child,
+.category-three .category-three-item:last-child,
+.category-four .category-four-item:first-child{
+    position: relative;
+}
+
+.category-one-item .card,
+.category-three-item .card{
+    left: -30vmin; 
+}
+
+.category-two-item .card,
+.category-four-item .card{
+    right: -30vmin; 
+}
+
+
+.our-services .card{
+    top: 10vmin;
+    /* position: absolute; */
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 25px 45px rgb(0, 0,0,0.2);
+    padding: 13vmin 5vmin 20vmin 10vmin;
+    height: 40%;
+    text-align: center;
+    width: 90%;
+}
+}
+
+.card p{
+    font-size: 0.9em;
+    color: rgb(0, 0,0,0.5);
+}
+
+.category-one-btn{
+    border: none;
+    background-image: linear-gradient(to bottom, #dd2476, #ff512f);
+}

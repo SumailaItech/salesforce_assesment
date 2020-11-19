@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ESales</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="assets/custom/css/main.css">
+
+    <script src="assets/vendor/jquery.js" defer></script>
+    <script src="assets/custom/js/app.js" defer></script>
+</head>
+<body>
+    <!-- <div class="backdrop open"></div> -->
+    <!-- <nav class="mobile-nav">
+            <ul class="mobile-nav__items">
+                <li class="mobile-nav__item">
+                    <a href="packages/index.html">Home</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a href="customers/index.html">Products</a>
+                </li>
+                <li class="mobile-nav__item">
+                        <a href="customers/index.html">About us</a>
+                    </li>
+                <li class="mobile-nav__item mobile-nav__item--cta">
+                    <a href="#" class="cta"><button>Login</button></a>
+                </li>
+            </ul>
+        </nav> -->
+    <header class="navbar">
+        <a href="index.html" class="logo">ESales Force</a>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="cta"><button>Login</button></a>
+        <!-- <button class="toggle-button">
+                <span class="toggle-button__bar"></span>
+                <span class="toggle-button__bar"></span>
+                <span class="toggle-button__bar"></span>
+            </button> -->
+    </header>
+
+   
+    <section class="categories">
+        <div class="category-item" style="background-image:url(images/categories/h1.jpg)">
+            <div class="category-inner">
+                <div onclick="catSelected('hats')">Hats</div>
+            </div>
+        </div>
+        <div class="category-item" style="background-image:url(images/categories/t1.jpg)">
+            <div class="category-inner">
+                <div onclick="catSelected('trousers')">Trousers</div>
+            </div>
+        </div>
+        <div class="category-item" style="background-image:url(images/categories/tshirts.jpg)">
+            <div class="category-inner">
+                <div onclick="catSelected('shirts')">Shirts</div>
+            </div>
+        </div>
+        <div class="category-item" style="background-image:url(images/categories/b1.jpg)">
+            <div class="category-inner">
+                <div onclick="catSelected('belts')">Belts</div>
+            </div>
+        </div>
+    </section>
+    <h2 class="featured-product-title">
+            Checkout What we offer
+    </h2>
+    <section class="our-services category-one">
+        <div class="category-one-item">
+         <img src="images/products/b4.jpg" alt="" srcset="">
+        </div>
+       <div class="category-one-item">
+            <div class="card">
+                <h2>Belts In Cart</h2>
+                <p>Lorem, ipsum.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel,
+                    quaerat. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, delectus.</p>
+              <button class="category-btn" data-cat="belts" onclick="catSelected('belts')">Check it out</button>      
+        </div>
+        </div>
+    </section>
+
+    <section class="our-services category-two">
+           <div class="category-two-item">
+                <div class="card">
+                    <h2>Hats In Cart</h2>
+                    <p>Lorem, ipsum.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel,
+                        quaerat. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, delectus.</p>
+                  <button class="category-btn" data-cat="hats" onclick="catSelected('hats')">Check it out</button>      
+            </div>
+            </div>
+            <div class="category-two-item">
+                <img src="images/products/h5.jpg" alt="" srcset="">
+            </div>
+        </section>
+
+        <section class="our-services category-three">
+                <div class="category-three-item">
+                        <img src="images/products/t3.jpg" alt="" srcset="">
+                       </div>
+               <div class="category-three-item">
+                    <div class="card">
+                        <h2>Trounsers In Cart</h2>
+                        <p>Lorem, ipsum.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel,
+                            quaerat. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, delectus.</p>
+                      <button class="category-btn" data-cat="trousers" onclick="catSelected('trousers')">Check it out</button>      
+                </div>
+                </div>
+               
+            </section>
+
+    <section class="our-services category-four">
+            <div class="category-four-item">
+                <div class="card">
+                <h2>Shirts In Cart</h2>
+                <p>Lorem, ipsum.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel,
+                    quaerat. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, delectus.</p>
+                <button class="category-btn" data-cat="shirts" onclick="catSelected('shirts')">Check it out</button>      
+            </div>
+            </div>
+            <div class="category-four-item">
+                <img src="images/products/p1.jpg" alt="" srcset="">
+            </div>
+        </section>
+
+        
+        <footer class="main-footer">
+            <div class="footer-links">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Location</h3>
+                <p>Tamale Northern Region</p>
+                <p>Block K 35 lamakara</p>
+                <p>customercare@esalesforce.org</p>
+            </div>
+            <div class="footer-links">
+                <h3>Subscribe</h3>
+                <form action="">
+                     <button>Submit</button>
+                    <input type="text">
+                </form>
+            </div>
+        </footer>
+
+</body>
+</html>

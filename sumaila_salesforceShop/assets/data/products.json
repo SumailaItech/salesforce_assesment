@@ -1,0 +1,69 @@
+{
+    "products":[
+        {
+        "id":101,
+        "name":"Plain White t shirt",
+        "image_url":"images/products/p1.jpg",
+        "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, cum error aliquid ",
+        "price":499,
+        "category":"shirts"
+    },
+    {
+        "id":102,
+        "name":"A black Cool hat",
+        "image_url":"images/products/h1.jpg",
+        "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, cum error aliquid ",
+        "price":456,
+        "category":"hats"
+    },
+    {
+        "id":103,
+        "name":"Pure Brown Leather Belt",
+        "image_url":"images/products/b1.jpg",
+        "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, cum error ",
+        "price":299,
+        "category":"belts"
+    },
+    {
+        "id":104,
+        "name":"Pure Cotton Trousers",
+        "image_url":"images/products/t4.jpg",
+        "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, cum error aliquid ,",
+        "price":289,
+        "category":"trousers"
+    },
+    {
+        "id":105,
+        "name":"Black leather Belt",
+        "image_url":"images/products/b4.jpg",
+        "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, cum error aliquid,",
+        "price":639,
+        "category":"belts"
+    },
+    {
+        "id":106,
+        "name":"Cool Black T shirt",
+        "image_url":"images/products/p4.jpg",
+        "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, cum error aliquid,",
+        "price":999,
+        "category":"shirts"
+    },
+    {
+        "id":107,
+        "name":"Continental Trousers",
+        "image_url":"images/products/t2.jpg",
+        "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, cum error aliquid",
+        "price":999,
+        "category":"trousers"
+    },
+    {
+        "id":108,
+        "name" :"City Ash hat",
+        "image_url":"images/products/h2.jpg",
+        "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, cum error aliquid ",
+        "price":849,
+        "category":"hats"
+    }
+
+]
+}

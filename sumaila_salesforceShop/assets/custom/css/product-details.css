@@ -1,0 +1,165 @@
+.products-details-item img{
+    width: 100%;
+}
+
+
+.products-details-item .card{
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 25px 45px rgb(0, 0,0,0.2);
+    padding: 1vmin 5vmin 10vmin 10vmin;
+    height: 40%;
+    /* text-align: center; */
+}
+
+.products-details-item .card p{
+    padding: 1rem;
+}
+
+.products-details-item .price{
+    font-weight: bold;
+    font-size: larger;
+}
+
+.products-details-item ul{
+    padding: 0;
+    margin: 0;
+}
+.products-details-item ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+.products-details-item ul li input{
+    width: 2rem;
+    border: none;
+    padding: 1rem;
+}
+
+input[type="number"]{
+    width: 100px;
+    height: 30px;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+input[type="text"]{
+    /* width: 100px; */
+    height: 30px;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+input{
+    display: block;
+    margin: 1rem;
+}
+
+.products-details-item .check input{
+    display: inline-block;
+}
+
+.products-details-item .totalPrice{
+    font-weight: bold;
+    font-size: larger;
+}
+
+.footer-links input{
+    display: inline-block;
+    margin: 0;
+}
+
+@media(min-width:50rem){
+    .products-details{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .products-details-item img{
+        width: 100%;
+    }
+
+    .products-details-item:last-child{
+        height: 80%;
+    }
+
+    .products-details-item .card{
+        height: 100%;
+    }
+
+    .footer-links input{
+        display: inline-block;
+    }
+}
+
+.products-details-item #cShopping{
+    background: #9ad3bc;
+    color: white;
+    display: none;
+}
+
+.products-details-item #checkout{
+    background: #f05454;
+    color: #fff;
+    display: none;
+}
+
+/* chech out section */
+
+.checkout-products{
+    max-width: 1000px;
+    margin: 4rem auto;
+}
+.check-card{
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 25px 45px rgb(0, 0,0,0.2);
+    padding: 5vmin 5vmin;
+    height: 40%;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    /* border: 1px solid #ddd; */
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even){
+      background-color: #f2f2f2
+    }
+
+  .check-title{
+      text-align: center;
+  }
+  .check-card table #tdImg{
+      width: 20%;
+  }
+  .check-card table img{
+      width: 50%;
+  }
+
+  .check-card table td button{
+      background:#ec5858;
+  }
+  .check-card table td button:hover{
+      background: #fa7f72;
+  }
+  .check-card #check-card-btn{
+    background: #8db596;
+  }
+ 
+  .check-card #check-card-btn:hover{
+      background: #0e918c;
+  }

@@ -1,0 +1,115 @@
+
+/* featured products section */
+.featured-products,
+.category-products{
+    margin-top: 1.25rem;
+    max-width: 75rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-gap: 0.3rem;
+}
+
+@media(max-width: 62rem){
+   .featured-products,
+   .category-products{
+       grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+@media(max-width: 50rem){
+    .featured-products,
+    .category-products{
+        grid-template-columns: 1fr;
+    }
+}
+
+.featured-product-title{
+    text-align: center
+}
+
+.featured-product-item{
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+}
+
+.featured-product-item:hover{
+    box-shadow: 0px 25px 45px rgb(0, 0,0,0.2);
+}
+
+.featured-product-item-image{
+   height: 15.5rem;
+   background-size: cover;
+   background-position: center;
+}
+
+.featured-product-item-image img{
+    width: 100%;
+    height: 100%
+}
+
+
+@media(max-width: 62rem){
+    .category-item{
+        min-width: 50%;
+    }
+}
+
+@media(max-width: 50rem){
+    .category-item{
+        min-width: 100%;
+    }
+}
+
+.featured-product-item > .title{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.featured-product-item > .description{
+    color: #666;
+}
+
+.featured-product-item > .price{
+    font-style: italic;
+}
+
+.products-categories{
+    /* background: #666; */
+    height: 5%;
+    border-bottom: 2px solid #666;
+}
+.products-categories ul{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+.products-categories ul li{
+    list-style: none;
+    padding: 0.5rem 1rem;
+     color: #666;
+    font-weight: bold;
+    border: 1px solid #666;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    
+}
+
+.products-categories ul li a{
+    text-decoration: none;
+   
+}
+
+.products-categories ul li:hover{
+    background-image: linear-gradient(to bottom, #dd2476, #ff512f);
+    border: none;
+    color: #fff;
+}
+
