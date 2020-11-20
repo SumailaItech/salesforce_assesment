@@ -9,6 +9,22 @@
     <link rel="stylesheet" href="assets/custom/css/product-details.css">
 </head>
 <body>
+<nav class="mobile-nav">
+        <ul class="mobile-nav__items">
+            <li class="mobile-nav__item">
+                <a href="/index.html">Home</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="/products.html">Products</a>
+            </li>
+            <li class="mobile-nav__item">
+                    <a href="">About us</a>
+                </li>
+            <li class="mobile-nav__item mobile-nav__item--cta">
+                <a href="/login.html" class="cta"><button>Login</button></a>
+            </li>
+        </ul>
+    </nav>
 <header class="navbar">
     <a href="#" class="logo">ESales Force</a>
     <nav>
@@ -18,7 +34,12 @@
             <li><a href="">About Us</a></li>
         </ul>
     </nav>
-    <a href="#" class="cta"><button>Login</button></a>
+    <a href="/login.html" class="cta"><button>Login</button></a>
+    <a class="toggle-button">
+            <span class="toggle-button__bar"></span>
+            <span class="toggle-button__bar"></span>
+            <span class="toggle-button__bar"></span>
+    </a>
 </header>
 
      <section class="">
@@ -28,12 +49,15 @@
                         
                         </table>
 
-                 <h1 id="totalAmount">Total cost: $500</h1> 
-                 <button id="check-card-btn">Checkout</button>
-                      
+                 
+             <div class="cartItems">
+                    <input type="text" name="" id="checkCoupon" placeholder="Coupon Code Available ?">
+                    <h1 id="totalAmount">Total cost: $500</h1> 
+                    <button id="check-card-btn">Checkout</button>
+             </div>         
          </div>
      </section>
-
+ 
    
      <footer class="main-footer">
             <div class="footer-links">

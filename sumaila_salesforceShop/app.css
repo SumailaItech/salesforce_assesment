@@ -26,7 +26,31 @@ header{
     padding: 1rem 10%;
     box-shadow: 0px 25px 45px rgb(0, 0,0,0.2);
 }
+@media(max-width:50rem){
+    .navbar ul li,
+   .navbar button{
+    display: none;
+}
 
+.toggle-button {
+    width: 3rem;
+    background: transparent;
+    border: none !important;
+    cursor: pointer;
+    padding-top: 0;
+    padding-bottom: 0;
+    vertical-align: middle;
+    border-radius: none;
+}
+
+.toggle-button__bar {
+    width: 100%;
+    height: 0.2rem;
+    background: black;
+    display: block;
+    margin: 0.6rem 0;
+}
+}
 .nav_links{
     list-style: none;
 }
@@ -98,7 +122,11 @@ button{
         display: flex;
      flex-direction: column;
     }
+
+  
 }
+
+
 .main-footer .footer-links{
     padding: 0;
     margin: 0;
@@ -137,8 +165,7 @@ button{
 }
  
 .mobile-nav {
-    /* display: none; */
-    opacity: 0;
+    display: none;
     position: fixed;
     z-index: 101;
     top: 0;
@@ -146,8 +173,8 @@ button{
     background: white;
     width: 80%;
     height: 100vh;
-    transform: translateX(4rem);
-    transition: opacity 0.8s, transform 500ms;
+    /* transform: translateX(4rem); */
+    /* transition: opacity 0.8s, transform 500ms; */
 }
 
 .mobile-nav__items {
@@ -174,31 +201,10 @@ button{
     margin: 1rem 0;
 }
 
-.backdrop {
-    position: fixed;
-    display: none;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    transition: opacity 0.2s linear;
-}
 
 .open{
     display: block !important;
     opacity: 1 !important;
-    transform: translateY(0) !important;
+    /* transform: translateY(0) !important; */
 }
 
-.toggle-button {
-    width: 3rem;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding-top: 0;
-    padding-bottom: 0;
-    vertical-align: middle;
-}

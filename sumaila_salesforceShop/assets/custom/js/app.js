@@ -114,11 +114,14 @@ const getSingleProduct = ()=>{
                   <p class="price"> price: $ ${value.price}</p>
                   <input type="color">
                   <input id="quantity" type="number" min="1" value="1">
-      
-                  <div class="check">
-                  <input type="checkbox" class="checkInput"><labe>50% Discount</label>
-                  </div>
-                  <input type="text" id="couponCode" placeholder="Coupon Code available ?">
+                  <select name="" id="size">
+                  <option value="">Select your size</option>
+                  <option value="SM">SM</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                  <option value="XXL">XXL</option>
+                  </select>    
                   <p class="totalPrice">Total price: $ ${value.price}</p>
                   <input type="hidden" value="${value.id}">
                   <button onclick="addToCart()" id="addToCart">Add to cart</button>
@@ -148,6 +151,8 @@ const addToCart = ()=>{
     let img = $('.products-details-item img').parent().children().attr('src');
     let price = $('.price').parent().children()[2].innerHTML;
     let tPrice = $('.totalPrice').parent().children()[6].innerHTML;
+    let size = $('#size').val();
+    console.log(size);
     price = price.split(':')[1].split(' ')[2];
     tPrice = tPrice.split(':')[1].split(' ')[2];
     let quantity = $('#quantity').val();
@@ -164,6 +169,7 @@ const addToCart = ()=>{
             title:title,
             price:price,
             qty:quantity,
+            size:size,
             total:tPrice
         }
     if(typeof(Storage) !== undefined){
@@ -208,9 +214,10 @@ const addToCart = ()=>{
         output += ` <tr>
                     <th>Image</th>
                     <th>Name</th>
-                    <th>Price</th>
+                    <th>Size</th>
+                    <th>Price($)</th>
                     <th>Quantity</th>
-                    <th>Total</th>
+                    <th>Total($)</th>
                     <th></th>
                     </tr>`;
        
@@ -219,9 +226,10 @@ const addToCart = ()=>{
                     <tr>
                     <td id="tdImg"><img src="${product.image}"></td>
                     <td>${product.title}</td>
-                    <td>${product.price}</td>
+                    <td>${product.size}</td>
+                    <td id="priceCheck">${product.price}</td>
                     <td>${product.qty}</td>
-                    <td>${product.total}</td>
+                    <td id="totalPrice">${product.total}</td>
                     <td><button onclick="removeProduct(${product.id})">Remove</button></td>
                     </tr>
             `;
@@ -253,7 +261,19 @@ const addToCart = ()=>{
           console.log(products);
     }
 
-
+ const catTotal =()=>{
+    let price = $('#priceCheck');
+    console.log(price);
+    let tPrice = $('#totalPrice').parent().children()[4];
+    console.log(tPrice);
+    // price = price.split(':')[1].split(' ')[2];
+    let quantity = $('.quantity').val();
+    console.log(quantity);
+    let total = quantity * price;
+    console.log(total);
+    tPrice.innerHTML =`${total}`;
+    sessionStorage.setItem('total', total);
+ }
 /*
     ********************************************
     * Entering point for the Document
@@ -310,34 +330,27 @@ $('#quantity').on('change',function(){
     let tPrice = $('.totalPrice').parent().children()[6];
     price = price.split(':')[1].split(' ')[2];
     let quantity = ($(this).val());
-
     let total = quantity * price;
     console.log(total);
     tPrice.innerHTML =`Total Price : $${total}`;
     sessionStorage.setItem('total', total);
 });
-   
 
-$('input[type="text"]').keyup(function(){
-   
-    // if($(this).is(":checked")){
-        let price = $('.price').parent().children()[2].innerHTML;
-        price = price.split(':')[1].split(' ')[2];
-        let tPrice = sessionStorage.getItem('total');
-        let quantity = $('#quantity').val();
-        let total = 0;
-    
-        if(tPrice === null || quantity < 2){
-            total = price * 0.5;
-        }else{
-         total = tPrice * 0.5;
-        }
-        console.log(total);
-        let totalPrice = $('.totalPrice').parent().children()[7];
-        console.log(totalPrice);
-        totalPrice.innerHTML =`Total Price : $ ${total.toFixed(2)}`;
-    // }
+
+
+$('#checkCoupon').keyup(function(){
+    if($(this).val() ==='IDDRISU'){
+        let payAmount =  $('.check-card #totalAmount').parent().children()[1];
+        let cProduct = JSON.parse(localStorage.getItem('products'));
+        let tAmount= cProduct.map(price=>price.price).reduce((fvalue, sValue)=>+fvalue + +sValue);
+        let totalAmount = tAmount * 0.5;
+         console.log(totalAmount);
+         console.log(payAmount);
+        payAmount.innerHTML =`Total Cost: ${totalAmount}`;
+    };
 })
+
+// 
 
 
 $('.products-details-item #cShopping').click(function(){
@@ -349,6 +362,11 @@ $('.products-details-item #cShopping').click(function(){
 $('#check-card-btn').click(()=>{
     alert("Thank you for your generous purchase");
     window.location = 'login.html'
+})
+
+
+$('.toggle-button').click(function(){
+    $('.mobile-nav').toggle('open');
 })
 })//end of document
 

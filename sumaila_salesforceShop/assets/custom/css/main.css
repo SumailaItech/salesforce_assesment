@@ -115,26 +115,12 @@
 .category-two-item .card,
 .category-four-item .card{
     right: 0; 
+    transform: rotateX(45deg)
 }
 
 .category-inner > div{
     font-size: 1rem;
 }
-
-/* .category-one .category-one-item:last-child,
-.category-two .category-two-item:first-child,
-.category-three .category-three-item:last-child,
-.category-four .category-four-item:first-child{
-    position: none;
-}
-
-.our-services .card{
-    position: none;
-    background: #fff;
-    border-radius: 3px;
-    height: 40%;
-    text-align: center;
-} */
 }
 
 .our-services .card{
@@ -145,6 +131,7 @@
     height: 40%;
     text-align: center;
     width: 90%;
+    
 }
 
 @media(min-width:60rem){
